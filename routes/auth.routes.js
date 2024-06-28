@@ -9,6 +9,7 @@ module.exports = function (app) {
 
   app.post("/api/user/register", controller.signup);
   app.post("/api/user/login", controller.login);
+  app.get("/api/user/getAllUser", controller.getAllUsers);
 
 //THIS IS HOW YOU CAN USE MIDDLEWARE
   // app.post("/api/user/login", [authJwt.verifyToken], controller.login);
