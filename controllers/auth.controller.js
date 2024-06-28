@@ -51,8 +51,8 @@ exports.login = async (req, res) => {
 
 exports.getAllUsers = async (req, res) => {
   try {
-    const users = await User.find({}, '-password'); // Exclude password from the response
-    res.status(200).send(users);
+    // const users = await User.find({}, '-password'); // Exclude password from the response
+    res.status(200).send('working');
   } catch (error) {
     res.status(500).send({ error: 'Error retrieving users' });
   }
